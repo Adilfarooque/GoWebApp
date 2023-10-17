@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"GoWebApp/tempParse/templates"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+	templates.SectionTemplates()
 }

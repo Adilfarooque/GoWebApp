@@ -5,38 +5,39 @@ import (
 	"net/http"
 )
 
-type ProductSpec struct {
+type productSpec struct {
 	Size        string
 	Weight      float32
 	Description string
 }
 
-type Product struct {
+type product struct {
 	ProID int
 	Name  string
 	Cost  float32
-	Specs ProductSpec
+	Specs productSpec
 }
 
 var tpl *template.Template
-var prod1 Product
+var prod1 product
+
 func ProductInfo() {
-	prod1 = Product{
+	prod1 = product{
 		ProID: 22,
-		Name: "I Phone 15 pro",
-		Cost: 999,
-		Specs: ProductSpec{
-			Size: "15 x 7 x 7nm",
-			Weight: 65,
+		Name:  "I Phone 15 pro",
+		Cost:  999,
+		Specs: productSpec{
+			Size:        "15 x 7 x 7nm",
+			Weight:      65,
 			Description: "The Best Product ",
 		},
 	}
 
-	tpl , _ = tpl.ParseGlob("/tempStruct/templates/*.html")
-	http.HandleFunc("/prd1",prdHandlerFunc)
-	http.ListenAndServe(":8080",nil)
+	tpl, _ = tpl.ParseGlob("templates/*.html")
+	http.HandleFunc("/productinfo", productInfoHandler)
+	http.ListenAndServe(":5500", nil)
 }
 
-func prdHandlerFunc(w http.ResponseWriter , r *http.Request)  {
-	tpl.ExecuteTemplate(w,"prd1.html",prod1)
+func productInfoHandler(w http.ResponseWriter, r *http.Request) {
+	tpl.ExecuteTemplate(w, "productinfo.html", prod1)
 }

@@ -1,10 +1,9 @@
 package main
 
-import (
-	tempctrstr "GoWebApp/tempCtrStr"
-)
+import tempstruct "GoWebApp/tempStruct"
 
 func main() {
 	// templates.SectionTemplates()
-	tempctrstr.AddingToHtml()
+	// tempctrstr.AddingToHtml()
+	tempstruct.ProductInfo()
 }

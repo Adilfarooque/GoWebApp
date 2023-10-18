@@ -1,9 +1,10 @@
 package main
 
 import (
-	"GoWebApp/tempParse/templates"
+	tempctrstr "GoWebApp/tempCtrStr"
 )
 
 func main() {
-	templates.SectionTemplates()
+	// templates.SectionTemplates()
+	tempctrstr.AddingToHtml()
 }

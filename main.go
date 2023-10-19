@@ -1,7 +1,7 @@
 package main
 
 import (
-	"GoWebApp/temprange"
+	"GoWebApp/temptolist"
 )
 
 func main() {
@@ -9,6 +9,7 @@ func main() {
 	// tempctrstr.AddingToHtml()
 	// tempstruct.ProductInfo()
 	//tempifelse.LanguageTest()
-	temprange.GroceriesList()
+	// temprange.GroceriesList()
+	temptolist.Todlist()
 
 }

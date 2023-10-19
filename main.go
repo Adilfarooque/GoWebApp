@@ -1,10 +1,14 @@
 package main
 
-import "GoWebApp/tempifelse"
+import (
+	"GoWebApp/temprange"
+)
 
 func main() {
 	// templates.SectionTemplates()
 	// tempctrstr.AddingToHtml()
 	// tempstruct.ProductInfo()
-	tempifelse.Language()
+	//tempifelse.LanguageTest()
+	temprange.GroceriesList()
+
 }

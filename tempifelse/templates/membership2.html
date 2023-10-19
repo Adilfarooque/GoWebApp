@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language-2</title>
+</head>
+<body>
+    passed in value : {{.}} <br><br>
+    {{/*
+        eq Returns the boolean truth of arg1 == arg2
+        ne Returns the boolean truth of arg1 != arg2
+        lt Returns the boolean truth of arg1 < arg2
+        le Returns the boolean truth of arg1 <= arg2
+        gt Returns the boolean truth of arg1 > arg2
+        ge Returns the boolean truth of arg1 >= arg2
+        */}}
+
+
+        eq .Lang "English":{{eq .Lang "English"}}
+        eq .Lang "English":{{eq .Lang "Arabic"}}
+        eq .Lang "English":{{eq .Lang "Mandarin"}}
+        
+
+        {{if eq .Lang "English"}}
+        <h1>Hello</h1>
+        {{else if eq .Lang "Arabic"}}
+        <h1>Arabic</h1>
+        {{else if eq .Lang "Mandarin"}}
+        <h1>Mandarin</h1>
+        {{else}}
+        <h2><ul>
+            <li>Hello</li>
+            <li>Arabic</li>
+            <li>Mandarin</li>
+        </ul></h2>
+        
+</body>
+</html>

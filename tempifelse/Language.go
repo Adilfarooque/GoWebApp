@@ -15,16 +15,14 @@ type User struct {
 
 var u User
 
-func Language() {
+func LanguageTest() {
 	//u = User{"Decaprio", "English", false}
 	u = User{"Eman Gazi", "Arabic", true}
 	// 	u = User{"Dojo Kat", "Mandarin", true}
 	// 	u = User{"AK47", ">", true}
 	tpl, _ = tpl.ParseGlob("tempifelse/templates/*.html")
-	http.HandleFunc("/lang", langHandler)
-	http.ListenAndServe(":8080", nil)
-}
-
-func langHandler(w http.ResponseWriter, r *http.Request) {
-	tpl.ExecuteTemplate(w, "lang.html", u)
+	http.HandleFunc("/lang", func(w http.ResponseWriter, r *http.Request) {
+		tpl.ExecuteTemplate(w, "membership.html", u)
+	})
+	http.ListenAndServe(":9090", nil)
 }

@@ -35,7 +35,7 @@ func ProductInfo() {
 
 	tpl, _ = tpl.ParseGlob("templates/*.html")
 	http.HandleFunc("/productinfo", productInfoHandler)
-	http.ListenAndServe(":5500", nil)
+	http.ListenAndServe(":8080", nil)
 }
 
 func productInfoHandler(w http.ResponseWriter, r *http.Request) {

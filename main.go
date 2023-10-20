@@ -1,15 +1,13 @@
 package main
 
-import (
-	"GoWebApp/tempindex"
-)
+import "GoWebApp/tempParse/templates"
 
 func main() {
-	// templates.SectionTemplates()
+	templates.SectionTemplates()
 	// tempctrstr.AddingToHtml()
 	// tempstruct.ProductInfo()
 	//tempifelse.LanguageTest()
 	// temprange.GroceriesList()
 	//temptolist.Todlist()
-	tempindex.IndexValue()
+	// tempindex.IndexValue()
 }

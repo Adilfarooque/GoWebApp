@@ -5,7 +5,12 @@ import (
 	"net/http"
 )
 
-var tpl *template.Template
+var tpl,_ = template.New("myTemplate").Funcs(template.FuncMap{
+	"lastItem": func(s []string) string {
+		lastIndex := len(s) - 1
+		return s[lastIndex]
+	},
+}).ParseFiles("index.html")
 
 var g []string
 

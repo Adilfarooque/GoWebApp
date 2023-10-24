@@ -1,14 +1,12 @@
 package main
 
-import "GoWebApp/tempindex"
+import (
+	basicserver2 "GoWebApp/BasicServer2"
+	"net/http"
+)
 
 func main() {
-	// templates.SectionTemplates()
-	// tempctrstr.AddingToHtml()
-	// tempstruct.ProductInfo()
-	//tempifelse.LanguageTest()
-	// temprange.GroceriesList()
-	//temptolist.Todlist()
-	tempindex.IndexValue()
-	// tempnested.Nested()
+	// basicserver1.BaseServer()
+	basicserver2.BasicServer2()
+	http.ListenAndServe(":8080", nil)
 }

@@ -1,7 +1,7 @@
 package main
 
 import (
-	tempparseglobe "GoWebApp/TempParseGlobe"
+	insertingdataintohtmltemplates "GoWebApp/InsertingDataIntoHtmlTemplates"
 	"net/http"
 )
 
@@ -10,6 +10,7 @@ func main() {
 	// basicserver1.BaseServer()
 	// tempindex.IndexValue()
 	//templatesparsing.ParsingFiles()
-	tempparseglobe.Glob()
+	//tempparseglobe.Glob()
+	insertingdataintohtmltemplates.Insert()
 	http.ListenAndServe(":8080", nil)
 }

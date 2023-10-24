@@ -7,14 +7,14 @@ import (
 
 func BasicServer2() {
 	http.HandleFunc("/hello", helloHandlerFunc)
-	http.HandleFunc("/wel", welcomeHandlerFunc)
+	http.HandleFunc("/about", aboutHandlerFunc)
 
 }
 
 func helloHandlerFunc(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hello All!!!")
+	fmt.Fprintf(w, "r.url.path: , %s", r.URL.Path)
 }
 
-func welcomeHandlerFunc(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Welcome :)")
+func aboutHandlerFunc(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "Welcome :) GopherWorld!")
 }

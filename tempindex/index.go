@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 )
+
 var tpl *template.Template
 
 func init() {
@@ -34,5 +35,4 @@ func IndexValue() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		tpl.ExecuteTemplate(w, "index.html", g)
 	})
-	http.ListenAndServe(":8080", nil)
 }

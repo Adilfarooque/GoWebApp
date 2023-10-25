@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - 2</title>
+</head>
+
+<body>
+    Pass in value: {{.}} <br><br>
+
+    {{/* Binary comparison operators */}}
+    eq .Lang "English": {{eq .Lang "English"}} <br>
+    eq .Lang "Mandarin": {{eq .Lang "Mandarin"}} <br>
+    eq .Lang "Spanish": {{eq .Lang "Spanish"}} <br><br>
+
+    {{if eq .Lang "English"}}
+    <h1>Hello!</h1>
+    {{else if eq .Lang "Mandarin"}}
+    <h1>你好</h1>
+    {{else if eq .Lang "Spanish"}}
+    <h1>Hola</h1>
+    {{else}}
+    <h1>
+        <ul>
+            <li>Hello</li>
+            <li>你好</li>
+            <li>Hola</li>
+        </ul>
+    </h1>
+    {{end}} <!-- Don't forget to end the "if" block -->
+</body>
+
+</html>

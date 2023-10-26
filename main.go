@@ -1,7 +1,7 @@
 package main
 
 import (
-	rangefunction3 "GoWebApp/RangeFunction3"
+	funcintemplate "GoWebApp/FuncinTemplate"
 	"fmt"
 	"net/http"
 )
@@ -17,8 +17,11 @@ func main() {
 	//testifelse.IfEles()
 	// rangefunction.Range()
 	// rangefunction2.TodoList()
-	rangefunction3.Range3()
+	//rangefunction3.Range3()
 	//indexesingolang.Indexesintemplates()
+	// nestedtemplate.Nested()
+	// methodintemplate.UsingMethod()
+	funcintemplate.UsingFunc()
 	fmt.Println("listen and serving on : 8000")
 	err := http.ListenAndServe(":8080", nil)
 	fmt.Println("server error", err)

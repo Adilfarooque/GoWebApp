@@ -1,7 +1,7 @@
 package main
 
 import (
-	"GoWebApp/indexesingolang"
+	rangefunction3 "GoWebApp/RangeFunction3"
 	"fmt"
 	"net/http"
 )
@@ -17,7 +17,8 @@ func main() {
 	//testifelse.IfEles()
 	// rangefunction.Range()
 	// rangefunction2.TodoList()
-	indexesingolang.Indexesintemplates()
+	rangefunction3.Range3()
+	//indexesingolang.Indexesintemplates()
 	fmt.Println("listen and serving on : 8000")
 	err := http.ListenAndServe(":8080", nil)
 	fmt.Println("server error", err)

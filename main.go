@@ -1,7 +1,8 @@
 package main
 
 import (
-	"GoWebApp/testifelse"
+	rangefunction "GoWebApp/RangeFunction"
+	rangefunction2 "GoWebApp/RangeFunction2"
 	"fmt"
 	"net/http"
 )
@@ -14,8 +15,10 @@ func main() {
 	//tempparseglobe.Glob()
 	//insertingdataintohtmltemplates.Insert()
 	//structbase.InStructBase()
-	testifelse.IfEles()
+	//testifelse.IfEles()
+	rangefunction.Range()
+	rangefunction2.TodoList()
 	fmt.Println("listen and serving on : 8000")
-	err := http.ListenAndServe("localhost:8080", nil)
+	err := http.ListenAndServe(":8080", nil)
 	fmt.Println("server error", err)
 }

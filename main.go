@@ -1,7 +1,7 @@
 package main
 
 import (
-	funcintemplate "GoWebApp/FuncinTemplate"
+	"GoWebApp/form"
 	"fmt"
 	"net/http"
 )
@@ -21,7 +21,9 @@ func main() {
 	//indexesingolang.Indexesintemplates()
 	// nestedtemplate.Nested()
 	// methodintemplate.UsingMethod()
-	funcintemplate.UsingFunc()
+
+	//funcintemplate.UsingFunc();;;;;;;;
+	form.FormValid()
 	fmt.Println("listen and serving on : 8000")
 	err := http.ListenAndServe(":8080", nil)
 	fmt.Println("server error", err)

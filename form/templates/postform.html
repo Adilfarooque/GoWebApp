@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET - FORM</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        .frm{
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML Form Using POST Method</h2>
+    <form class="frm"action="/processget" method="POST">
+        <label for="UsernameID">Username :</label><br>
+        <input type="text" name="Username" id="UsernameID" placeholder="Username"><br>
+        <label for="dataID">Sensitive Data:</label><br>
+        <input type="text" name="data" id="dataID" placeholder="Data Details"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

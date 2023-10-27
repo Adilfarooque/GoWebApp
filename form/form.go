@@ -30,15 +30,27 @@ func FormValid() {
 		fmt.Println("processGetHandler running")
 		var s User
 		s.Username = r.FormValue("Username")
-		s.Data = r.FormValue("d	ata")	
+		s.Data = r.FormValue("d	ata")
 		fmt.Println("Username:", s.Username, "Data:", s.Data)
 		err = tpl.ExecuteTemplate(w, "thanks.html", s)
-		if err != nil { 
+		if err != nil {
 			log.Fatal(err)
 		}
 	})
 	http.HandleFunc("/postform", func(w http.ResponseWriter, r *http.Request) {
 		err = tpl.ExecuteTemplate(w, "postform.html", nil)
+		if err != nil {
+			log.Fatal(err)
+		}
+	})
+
+	http.HandleFunc("/processpost", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println("processGetHandler running")
+		var s User
+		s.Username = r.FormValue("Username")
+		s.Data = r.FormValue("d	ata")
+		fmt.Println("Username:", s.Username, "Data:", s.Data)
+		err = tpl.ExecuteTemplate(w, "thanks.html", s)
 		if err != nil {
 			log.Fatal(err)
 		}

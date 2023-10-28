@@ -37,6 +37,7 @@ func FormValid() {
 			log.Fatal(err)
 		}
 	})
+
 	http.HandleFunc("/postform", func(w http.ResponseWriter, r *http.Request) {
 		err = tpl.ExecuteTemplate(w, "postform.html", nil)
 		if err != nil {
@@ -55,5 +56,4 @@ func FormValid() {
 			log.Fatal(err)
 		}
 	})
-
 }

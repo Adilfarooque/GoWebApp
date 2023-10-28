@@ -1,7 +1,7 @@
 package main
 
 import (
-	"GoWebApp/form"
+	"GoWebApp/form2"
 	"fmt"
 	"net/http"
 )
@@ -23,8 +23,10 @@ func main() {
 	// methodintemplate.UsingMethod()
 
 	//funcintemplate.UsingFunc();;;;;;;;
-	form.FormValid()
-	fmt.Println("listen and serving on : 8000")
+
+	//form.FormValid()
+	form2.FormValid2()
+	fmt.Println("listen and serving on : 8080")
 	err := http.ListenAndServe(":8080", nil)
 	fmt.Println("server error", err)
 }

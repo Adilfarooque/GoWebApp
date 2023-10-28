@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getform</title>
+    <style>
+        form{
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML From Using Post Method</h2>
+
+    <form action="/processpost" method="post">
+        <label for="userID">Username</label><br>
+        <input type="text"  name="username" id="userID"><br>
+        <label for="numberID">Number (1-10):</label><br>
+        <input type="number" name="numberName" id="numberID" min="1" max="10"><br>
+        <label for="FloatID">Float64 (between 1 and 5):</label><br>
+        <input type="number" name="FloatName" id="FloatID" min="1" max="5" step=".00001">
+        <input type="radio" name="upName" id="YesUpID" value="true  ">
+        <label for="YesUpID">Recieve Updates</label><br>
+        <input type="radio" name="upName" id="NoUpID" value="false">
+        <label for="NoUpID">Maybe Later</label><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

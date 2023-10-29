@@ -45,6 +45,5 @@ func BServer3() {
 	http.Handle("/Public/", http.StripPrefix("/Public/", http.FileServer(http.Dir("./Public"))))
 	*/
 	//http.Handle("/Public", http.FileServer(http.Dir(".")))
-	
 
 }

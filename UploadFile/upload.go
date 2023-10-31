@@ -45,6 +45,7 @@ func UpLoad() {
 		var osFile os.File
 		//func TempFile(dir,pattern String)(f *os.file, error)
 		
+		
 	})
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {

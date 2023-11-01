@@ -3,7 +3,7 @@ package uploadfile
 import (
 	"fmt"
 	"html/template"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -42,10 +42,26 @@ func UpLoad() {
 
 		contentType := fileHeader.Header["Content-Type"][0]
 		fmt.Println("Content Type:", contentType)
-		var osFile os.File
+		var osFile *os.File
 		//func TempFile(dir,pattern String)(f *os.file, error)
-		
-		
+		if contentType == "image/jpeg" {
+			osFile, err = os.CreateTemp("images", "*.jpg")
+		} else if contentType == "application/pdf" {
+			osFile, err = os.CreateTemp("PDFs", "*.pdf")
+		} else if contentType == "text/javascript" {
+			osFile, err = os.CreateTemp("js", "*.js")
+		}
+
+		fmt.Println("error:", err)
+		defer osFile.Close()
+
+		//func ReadAll(r io.Reader)([]byte, error)
+		fileBytes, err := io.ReadAll(file)
+		if err != nil {
+			fmt.Println(err)
+		}
+		osFile.Write(fileBytes)
+		fmt.Fprintf(w, "your file was successfully uploaded!\n")
 	})
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {

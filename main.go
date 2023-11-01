@@ -1,7 +1,7 @@
 package main
 
 import (
-	basicserver3 "GoWebApp/basicServer3"
+	cookies "GoWebApp/Cookies"
 	"fmt"
 	"net/http"
 )
@@ -28,7 +28,14 @@ func main() {
 	//form2.FormValid2()
 
 	//----Serving Files----
-	basicserver3.BServer3()
+	//basicserver3.BServer3()
+
+	//Uploading files to Golang server
+	//uploadfile.UpLoad()
+
+	//HTTP Cookies
+	cookies.CookiesWorld()
+
 	fmt.Println("listen and serving on : 8080")
 	err := http.ListenAndServe(":8080", nil)
 	fmt.Println("server error", err)

@@ -39,13 +39,13 @@ func CookiesWorld() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		//looks for cookie on our machine
 		//func (r *request) Cookie(name string)(*Cookie, error)
-		cookie, err := r.Cookie("2st-cookie")
+		cookie, err := r.Cookie("3rd-cookie")
 		fmt.Println("cookie:", cookie, "err:", err)
 		if err != nil {
 			fmt.Println("cookie was not found")
 			cookie = &http.Cookie{
-				Name:     "2st-cookie",
-				Value:    "my second cookie value",
+				Name:     "3rd-cookie",
+				Value:    "my 3rd cookie value",
 				HttpOnly: true,
 			}
 			//func SetCookie(w ResponseWriter , cookies *cookie)

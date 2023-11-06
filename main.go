@@ -2,6 +2,7 @@ package main
 
 import (
 	cookies "GoWebApp/Cookies"
+	"context"
 	"fmt"
 	"net/http"
 )
@@ -37,6 +38,7 @@ func main() {
 	cookies.CookiesWorld()
 
 	fmt.Println("listen and serving on : 8080")
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":8080", context.ClearHandle(http.DefaultServeMux))
 	fmt.Println("server error", err)
+	
 }

@@ -1,8 +1,7 @@
 package main
 
 import (
-	cookies "GoWebApp/Cookies"
-	"context"
+	session "GoWebApp/Session"
 	"fmt"
 	"net/http"
 )
@@ -35,10 +34,12 @@ func main() {
 	//uploadfile.UpLoad()
 
 	//HTTP Cookies
-	cookies.CookiesWorld()
+	//cookies.CookiesWorld()
 
+	//Sessions With Gorilla toolkit
+	session.SessionUp()
 	fmt.Println("listen and serving on : 8080")
-	err := http.ListenAndServe(":8080", context.ClearHandle(http.DefaultServeMux))
+	err := http.ListenAndServe(":8080", nil)
 	fmt.Println("server error", err)
-	
+
 }

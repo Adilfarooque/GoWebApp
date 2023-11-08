@@ -1,7 +1,6 @@
 package main
 
 import (
-	session "GoWebApp/Session"
 	"fmt"
 	"net/http"
 )
@@ -37,7 +36,8 @@ func main() {
 	//cookies.CookiesWorld()
 
 	//Sessions With Gorilla toolkit
-	session.SessionUp()
+	//session.SessionUp()
+
 	fmt.Println("listen and serving on : 8080")
 	err := http.ListenAndServe(":8080", nil)
 	fmt.Println("server error", err)

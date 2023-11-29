@@ -49,7 +49,7 @@ func FormValid() {
 		fmt.Println("processGetHandler running")
 		var s User
 		s.Username = r.FormValue("Username")
-		s.Data = r.FormValue("d	ata")
+		s.Data = r.FormValue("data")
 		fmt.Println("Username:", s.Username, "Data:", s.Data)
 		err = tpl.ExecuteTemplate(w, "thanks.html", s)
 		if err != nil {

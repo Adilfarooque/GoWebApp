@@ -7,7 +7,7 @@ import (
 
 func main() {
 	//basicserver2.BasicServer2()
-	// basicserver1.BaseServer()
+	//basicserver1.BaseServer()
 	// tempindex.IndexValue()
 	//templatesparsing.ParsingFiles()
 	//tempparseglobe.Glob()
@@ -21,7 +21,7 @@ func main() {
 	// nestedtemplate.Nested()
 	// methodintemplate.UsingMethod()
 
-	//funcintemplate.UsingFunc();;;;;;;;
+	//funcintemplate.UsingFunc()
 
 	//form.FormValid()
 	//form2.FormValid2()

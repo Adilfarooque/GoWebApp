@@ -1,6 +1,7 @@
 package main
 
 import (
+	uploadfile "GoWebApp/UploadFile"
 	"fmt"
 	"net/http"
 )
@@ -30,13 +31,16 @@ func main() {
 	//basicserver3.BServer3()
 
 	//Uploading files to Golang server
-	//uploadfile.UpLoad()
+	uploadfile.UpLoad()
 
 	//HTTP Cookies
 	//cookies.CookiesWorld()
 
 	//Sessions With Gorilla toolkit
 	//session.SessionUp()
+
+	//Uploading files
+	//uploadingfiles.Upld()
 
 	fmt.Println("listen and serving on : 8080")
 	err := http.ListenAndServe(":8080", nil)
